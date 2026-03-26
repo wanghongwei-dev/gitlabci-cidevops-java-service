@@ -147,4 +147,4 @@ mvn test
 
 ## 许可证
 
-Apache License
+MIT License
