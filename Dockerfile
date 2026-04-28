@@ -1,5 +1,6 @@
-FROM  eclipse-temurin:8-jdk-alpine
-MAINTAINER devops
-ADD target/*.jar /app.jar
-# 执行命令
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM eclipse-temurin:8-jdk-alpine
+
+WORKDIR /app
+COPY target/*.jar app.jar
+EXPOSE 8081
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
